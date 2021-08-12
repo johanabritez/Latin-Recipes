@@ -1,0 +1,142 @@
+/*resetea los valores por defecto de la página*/
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/*clase para el nav bar*/
+.nav-bar
+{
+	border-bottom: 1px solid #A52A2A;
+	background: #8B0000;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 20px;
+}
+
+/*clase para los "li" del nav bar*/
+.nav-link-list
+{
+	list-style-type: none;
+}
+
+/*a los "li" del nav link list posicionamos en una misma línea y agregamos padding*/
+.nav-link-list .link-list
+{
+	display: inline-block;
+	padding: 20px 10px;
+}
+
+/*quitamos los decorados a los "a" del nav bar y agregamos un color */
+.nav-bar a
+{
+	color: #e0e0e0;
+	text-decoration: none;
+	font-family: Verdana;
+}
+
+/*a los "li" del nav bar le agregamos un color al pasar el mouse encima*/
+.nav-bar li:hover
+{
+	background: #b73831;
+}
+
+.menu
+{
+	display: none;
+}
+
+/*clase para cada línea del menú para pantallas chicas*/
+.menu-line
+{
+	width: 20px;
+	height: 3px;
+	background-color: white;
+	margin-bottom: 4px;
+}
+
+/*cuando la pantalla sea menor a 480 mostrará el menú, para ello usamos media*/
+@media all and (max-width:  480px)
+{
+	/*cambiamos la dirección del nav bar para que muestre en columna*/
+	.nav-bar
+	{
+		flex-direction: column;
+		position: relative;
+	}
+
+	.menu
+	{
+		display: block;
+		position: absolute;
+		right: 15px;
+		top: 8px;
+	}
+
+	.nav-link-list
+	{
+		list-style-type: none;
+		text-align: center;
+		padding-top: 10px;
+		width: 100%;
+	}
+
+	.nav-link-list .link-list
+	{
+		display: block;
+		border-top: 1px solid white;
+	}
+}
+
+/*clase para la cabecera*/
+.header-div
+{
+	background: #8B0000;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/*estilo para el título de la cabecera*/
+#title-header
+{
+	font-family: 'Roboto', sans-serif;
+	font-size: 50px;
+	color: #f8d859;
+	padding-bottom: 10px;
+}
+
+/*estilo para el párrafo de la cabecera */
+#header-p
+{
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	color: #de5e57;
+	padding-bottom: 30px;
+
+}
+
+/*estilo para botón de "mandar receta" de la cabecera*/
+#header-button
+{
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+    display: inline-block;
+	border-radius: 6px;
+	background: #e0e0e0;
+	color: #b73831;
+	font-weight: 700;
+	padding: 20px 30px;
+	margin-left: 50px;
+}
+
+@media all and (max-width:  900px)
+{
+	.header-div
+	{
+		flex-direction: column;
+		/*align-items: center;*/
+	}
+}
